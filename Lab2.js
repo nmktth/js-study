@@ -1,4 +1,4 @@
-// Like button functionality
+// Функционал кнопки "лайк"
 const likeBtn = document.getElementById('like-btn');
 
 function handleLikeClick() {
@@ -8,7 +8,7 @@ function handleLikeClick() {
 
 likeBtn.addEventListener('click', handleLikeClick);
 
-// Dislike button functionality
+// Функционал кнопок "лайк" и "дизлайк"
 const likeBtn2 = document.getElementById('like-btn-2');
 const dislikeBtn = document.getElementById('dislike-btn');
 
@@ -21,22 +21,22 @@ function handleDislikeBtnClick() {
 }
 
 function toggleReaction(activeBtn, inactiveBtn) {
-  // If active button is already active - deactivate it
+  // Если активная кнопка уже активна - деактивируем ее
   if (activeBtn.classList.contains('active')) {
     activeBtn.classList.remove('active');
     activeBtn.setAttribute('aria-pressed', 'false');
     
-    // Remove dislike class only from dislike button
+    // Удаляем класс dislike только с кнопки дизлайка
     if (activeBtn === dislikeBtn) {
       activeBtn.classList.remove('dislike');
     }
   } 
-  // If active button is inactive - activate it and deactivate the other
+  // Если активная кнопка неактивна - активируем ее и деактивируем другую
   else {
     activeBtn.classList.add('active');
     activeBtn.setAttribute('aria-pressed', 'true');
     
-    // Add dislike class only to dislike button
+    // Добавляем класс dislike только для кнопки дизлайка
     if (activeBtn === dislikeBtn) {
       activeBtn.classList.add('dislike');
     }
@@ -44,7 +44,7 @@ function toggleReaction(activeBtn, inactiveBtn) {
     inactiveBtn.classList.remove('active');
     inactiveBtn.setAttribute('aria-pressed', 'false');
     
-    // Remove dislike class from inactive button if it's dislike
+    // Удаляем класс dislike с неактивной кнопки, если это дизлайк
     if (inactiveBtn === dislikeBtn) {
       inactiveBtn.classList.remove('dislike');
     }
@@ -54,7 +54,7 @@ function toggleReaction(activeBtn, inactiveBtn) {
 likeBtn2.addEventListener('click', handleLikeBtn2Click);
 dislikeBtn.addEventListener('click', handleDislikeBtnClick);
 
-// Cart functionality
+// Функционал корзины
 function handleAddToCartClick() {
   const cartCounter = document.getElementById('cart-counter');
   const currentCount = parseInt(cartCounter.textContent, 10);
@@ -68,25 +68,25 @@ function setupCart() {
   });
 }
 
-// Sorting functionality
+// Функционал сортировки
 function setupSorting() {
   const sortAscBtn = document.getElementById('sort-asc');
   const sortDescBtn = document.getElementById('sort-desc');
   const sortOriginalBtn = document.getElementById('sort-original');
   const numbersList = document.getElementById('numbers-list');
 
-  // Generate array of random numbers
+  // Генерируем массив случайных чисел
   const numbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
   let currentNumbers = [...numbers];
 
-  // Function to render the list
+  // Функция отрисовки списка
   function renderNumbers() {
-    // Clear the list (without using innerHTML)
+    // Очищаем список (без использования innerHTML)
     while (numbersList.firstChild) {
       numbersList.removeChild(numbersList.firstChild);
     }
 
-    // Create new list items
+    // Создаем новые элементы списка
     currentNumbers.forEach(num => {
       const li = document.createElement('li');
       li.textContent = num;
@@ -109,23 +109,23 @@ function setupSorting() {
     renderNumbers();
   }
 
-  // Initialize on load
+  // Инициализация при загрузке
   renderNumbers();
 
-  // Event listeners for buttons
+  // Назначаем обработчики событий для кнопок
   sortAscBtn.addEventListener('click', handleSortAscClick);
   sortDescBtn.addEventListener('click', handleSortDescClick);
   sortOriginalBtn.addEventListener('click', handleSortOriginalClick);
 }
 
-// Coordinates functionality
+// Функционал отображения координат
 function handlePointerDown(e) {
   const coordinatesDisplay = document.getElementById('coordinates');
   const targetName = e.target.tagName.toLowerCase();
   coordinatesDisplay.textContent = `X: ${e.clientX}, Y: ${e.clientY} - ${targetName}`;
 }
 
-// Initialize all functionality when DOM is loaded
+// Инициализация всего функционала при загрузке DOM
 function initialize() {
   setupCart();
   setupSorting();
