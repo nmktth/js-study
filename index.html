@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ильин Артём Русланович - Лабораторная работа №2</title>
+    <style>
+        section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
+        button { margin: 5px; padding: 8px 12px; cursor: pointer; }
+        .active { background-color: #4CAF50; color: white; }
+        .card { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; }
+        #coordinates { position: fixed; bottom: 10px; left: 10px; background: white; padding: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ильин Артём Русланович - Лабораторная работа №2</h1>
+    </header>
+    <main>
+        <section id="like-section">
+            <h2>Like</h2>
+            <button id="like-btn" aria-label="Like">👍</button>
+        </section>
+        <section id="like-dislike-section">
+            <h2>Like/Dislike</h2>
+            <button id="like-btn-2" aria-label="Like">👍</button>
+            <button id="dislike-btn" aria-label="Dislike">👎</button>
+        </section>
+        
+        <section id="cart-section">
+            <h2>Корзина</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Товар 1">
+                <p>Товар 1 - 100₽</p>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Товар 2">
+                <p>Товар 2 - 200₽</p>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+        </section>
+        
+        <section id="sort-section">
+            <h2>Сортировка</h2>
+            <button id="sort-asc">По возрастанию</button>
+            <button id="sort-desc">По убыванию</button>
+            <button id="sort-original">Исходный порядок</button>
+            <ul id="numbers-list"></ul>
+        </section>
+        
+        <section id="coordinates-section">
+            <h2>Координаты</h2>
+            <p>Кликните в любом месте страницы</p>
+            <div id="coordinates"></div>
+        </section>
+    </main>
+    <script type="module" src="Lab2.js"></script>
+</body>
+</html>
