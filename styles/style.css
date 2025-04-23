@@ -11,28 +11,28 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('fonts/gilroy/Gilroy-Regular.ttf') format('ttf');
+    src: url('');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('fonts/gilroy/Gilroy-ExtraBold.ttf') format('ttf');
+    src: url('');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Oceanic';
-    src: url('fonts/oceanic/TRIAL_Oceanic-Regular-BF6487cfe600a81.woff') format('woff');
+    src: url('');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Oceanic';
-    src: url('fonts/oceanic/TRIAL_Oceanic-Bold-BF6487cfe5cfe3d.woff') format('woff');
+    src: url('');
     font-weight: bold;
     font-style: normal;
 }
