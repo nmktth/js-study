@@ -1,69 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ильин Артём Русланович - Лабораторная работа №2</title>
-    <style>
-        section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
-        button { margin: 5px; padding: 8px 12px; cursor: pointer; }
-        .active { background-color: green; color: white; }
-        .dislike { background-color: red; }
-        .btn { border: none; border-radius: 50%; width: 40px; height: 40px;}
-        .text_btn { border: none; border-radius: 10px; width: auto;}
-        .card { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; text-align: center;}
-        .cart { position: fixed; right: 20px; top: 20px; width: 30px; height: 30px; font-size: 20px; display: flex; text-align: center; justify-content: center; align-items: center;}
-        #coordinates { position: fixed; bottom: 10px; right: 10px; background: white; padding: 5px; }
-    </style>
+    <meta name="description" content="AQUARIM - это наипрекраснейший ресторан с наивкуснейшей едой, рыбками и т.д.">
+    <title>Aquarim</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="fonts/gilroy/fonts.css">
+    <link rel="stylesheet" href="fonts/oceanic/fonts.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Ильин Артём Русланович - Лабораторная работа №2</h1>
-        <div class="cart-icon cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span>🗑️</span>
-            <span id="cart-counter" class="cart-counter">0</span>
+<header class="header">
+    <nav class="container navigation">
+        <a class="skip-link" href="#main">Перейти к контенту</a>
+        <a href="index.html" class="text_logo">AQUARIM</a>
+        <ul class="main_nav">
+            <li class="button_nav head_bt"><a href="#about-restaraunt">О ресторане</a></li>
+            <li class="button_nav head_bt"><a href="#menu">Меню</a></li>
+            <li class="button_nav head_bt"><a href="#delivery">Доставка и оплата</a></li>
+            <li class="button_nav head_bt"><a href="#contacts">Контакты</a></li>
+        </ul>
+        <button class="shop_cart"><img src="images/shop_cart.svg" alt=""><span class="sr-only">Открывает корзину с товарами.</span></button>
+        <button class="nav_open"><img src="images/menu_button.svg" alt=""><span class="sr-only">Открывает навигацию.</span></button>
+    </nav>
+</header>
+
+<footer>
+    <div class="container footer">
+        <div class="foot_navigation">
+            <p class="some_big">© 2018-2024 AQUARIM</p>
+            <nav>
+                <h3 class="foot_head">О РЕСТОРАНЕ</h3>
+                <ul class="foot_nav">
+                    <li class="button_nav foot_bt"><a href="#">О шефе</a></li>
+                    <li class="button_nav foot_bt"><a href="#">Галерея</a></li>
+                    <li class="button_nav foot_bt"><a href="#">Новости</a></li>
+                    <li class="button_nav foot_bt"><a href="#">Команда</a></li>
+                    <li class="button_nav foot_bt"><a href="grid.html">Grid</a></li>
+                    <li class="button_nav foot_bt"><a href="form.html">Form</a></li>
+                    <li class="button_nav foot_bt"><a href="demo.html">Demo</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <h3 class="foot_head">ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
+                <ul class="foot_nav">
+                    <li class="button_nav foot_bt"><a href="#menu">Меню</a></li>
+                    <li class="button_nav foot_bt"><a href="#delivery">Доставка и оплата</a></li>
+                    <li class="button_nav foot_bt"><a href="#reviews">Отзывы</a></li>
+                    <li class="button_nav foot_bt"><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
         </div>
-    </header>
-    <main>
-        <section id="like-section">
-            <h2>Like</h2>
-            <button id="like-btn" class="btn" aria-label="Like">👍</button>
-        </section>
-        <section id="like-dislike-section">
-            <h2>Like/Dislike</h2>
-            <button id="like-btn-2" class="btn" aria-label="Like">👍</button>
-            <button id="dislike-btn" class="btn" aria-label="Dislike">👎</button>
-        </section>
-        
-        <section id="cart-section">
-            <h2>Корзина</h2>
-            <div class="card">
-                <img src="https://sun9-36.userapi.com/s/v1/ig2/oXr-YC5yhAASHpQ49N6YmhIXV5tBkCIISTR04K5eYCIcTLpGR_xAYBrmRLPttLyN_0gAgD4r-kSwXkiDVQ7P4jr1.jpg?size=400x400&quality=95&crop=1,777,1079,1079&ava=1" alt="Товар 1">
-                <p>Товар 1 - 100₽</p>
-                <button class="add-to-cart text_btn">В корзину</button>
-            </div>
-            <div class="card">
-                <img src="https://sun9-36.userapi.com/s/v1/ig2/oXr-YC5yhAASHpQ49N6YmhIXV5tBkCIISTR04K5eYCIcTLpGR_xAYBrmRLPttLyN_0gAgD4r-kSwXkiDVQ7P4jr1.jpg?size=400x400&quality=95&crop=1,777,1079,1079&ava=1" alt="Товар 2">
-                <p>Товар 2 - 200₽</p>
-                <button class="add-to-cart text_btn">В корзину</button>
-            </div>
-        </section>
-        
-        <section id="sort-section">
-            <h2>Сортировка</h2>
-            <button id="sort-asc" class="text_btn">По возрастанию</button>
-            <button id="sort-desc" class="text_btn">По убыванию</button>
-            <button id="sort-original" class="text_btn">Исходный порядок</button>
-            <ul id="numbers-list"></ul>
-        </section>
-        
-        <section id="coordinates-section">
-            <h2>Координаты</h2>
-            <p>Кликните в любом месте страницы</p>
-            <div id="coordinates"></div>
-        </section>
-    </main>
-    <script type="module" src="Lab2.js"></script>
+        <p class="footer_icon">AQUARIM</p>
+        <div class="site_info">
+            <a class="politics" href="#">Политика обработки персональных данных</a>
+            <a class="desing_by" href="#">Desing by @sshultse</a>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
