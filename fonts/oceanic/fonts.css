@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Oceanic';
+    font-style: normal;
+    font-weight: 400;
+    src: local('TRIAL Oceanic Regular'), url('TRIAL_Oceanic-Regular-BF6487cfe600a81.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic';
+    font-style: normal;
+    font-weight: 300;
+    src: local('TRIAL Oceanic Light'), url('TRIAL_Oceanic-Light-BF6487cfe5eb596.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic';
+    font-style: normal;
+    font-weight: 500;
+    src: local('TRIAL Oceanic Medium'), url('TRIAL_Oceanic-Medium-BF6487cfe5e2078.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic';
+    font-style: normal;
+    font-weight: 700;
+    src: local('TRIAL Oceanic Bold'), url('TRIAL_Oceanic-Bold-BF6487cfe5cfe3d.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic';
+    font-style: normal;
+    font-weight: 800;
+    src: local('TRIAL Oceanic Extrabold'), url('TRIAL_Oceanic-Extrabold-BF6487cfe5e8eff.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic';
+    font-style: normal;
+    font-weight: 900;
+    src: local('TRIAL Oceanic Poster'), url('TRIAL_Oceanic-Poster-BF6487cfe5ecab1.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic Text';
+    font-style: normal;
+    font-weight: 400;
+    src: local('TRIAL Oceanic Text Regular'), url('TRIAL_Oceanic-Text-Regular-BF6487cfe5c94ea.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic Text';
+    font-style: normal;
+    font-weight: 300;
+    src: local('TRIAL Oceanic Text Book'), url('TRIAL_OceanicText-Book-BF6487cfe5da4b1.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic Text';
+    font-style: normal;
+    font-weight: 500;
+    src: local('TRIAL Oceanic Text Medium'), url('TRIAL_OceanicText-Medium-BF6487cfe5dde8c.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic Text';
+    font-style: normal;
+    font-weight: 700;
+    src: local('TRIAL Oceanic Text Bold'), url('TRIAL_OceanicText-Bold-BF6487cfe5d76e7.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oceanic Text';
+    font-style: normal;
+    font-weight: 800;
+    src: local('TRIAL Oceanic Text Extrabold'), url('TRIAL_Oceanic-Text-Extrabold-BF6487cfe5ac6a0.woff') format('woff');
+}

@@ -2169,3 +2169,78 @@ legend {
     outline: 2px solid var(--text-color);
     position: relative;
 }
+
+/* Стили модального окна */
+.register-dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.register-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-dialog {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.password-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.875rem;
+    min-height: 1.5em;
+}
+
+/* Валидация */
+input:user-invalid {
+    border-color: #d32f2f;
+}
+
+input:user-valid {
+    border-color: #388e3c;
+}
+
+.submit-btn {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
