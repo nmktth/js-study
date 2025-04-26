@@ -13,9 +13,7 @@ function initRegistrationForm() {
     
     // Назначение обработчиков для полей ввода
     registerForm.querySelectorAll('input').forEach((input) => {
-        input.addEventListener('blur', () => {
-            validateField(input);
-        });
+        input.addEventListener('blur', handleInputBlur);
     });
 
     registerForm.addEventListener('submit', handleFormSubmit);
@@ -44,6 +42,10 @@ function handlePasswordHide() {
     document.getElementById('password').type = 'password';
 }
 
+function handleInputBlur() {
+    validateField(this);
+}
+
 function handleFormSubmit(e) {
     e.preventDefault();
     const registerForm = document.getElementById('registerForm');
@@ -60,8 +62,13 @@ function handleFormSubmit(e) {
 
     if (isValid) {
         const formData = new FormData(registerForm);
+        const formObject = {};
+        
+        for (const [key, value] of formData) {
+            formObject[key] = value;
+        }
         // eslint-disable-next-line no-console
-        console.log(Object.fromEntries(formData));
+        console.log(formObject);  // Вывод объекта с данными формы
         document.getElementById('registerDialog').close();
     }
 }
