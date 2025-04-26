@@ -138,7 +138,7 @@ p {
     font-family: 'Oceanic', serif;
     font-size: 6.2rem;
     line-height: 1;
-    color: var(--background-color);
+    color: white;
     margin: 30px auto;
     text-align: center;
 }
