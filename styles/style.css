@@ -139,7 +139,6 @@ p {
     font-size: 6.2rem;
     line-height: 1;
     color: var(--background-color);
-    opacity: 30%;
     margin: 30px auto;
     text-align: center;
 }
