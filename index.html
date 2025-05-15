@@ -1,95 +1,67 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="ru">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AQUARIM - это наипрекраснейший ресторан с наивкуснейшей едой, рыбками и т.д.">
-    <title>Aquarim</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Лабораторная работа №4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<header class="header">
-    <nav class="container navigation">
-        <a class="skip-link" href="#main">Перейти к контенту</a>
-        <a href="index.html" class="text_logo">AQUARIM</a>
-        <ul class="main_nav">
-            <li class="button_nav head_bt"><a href="#about-restaraunt">О ресторане</a></li>
-            <li class="button_nav head_bt"><a href="#menu">Меню</a></li>
-            <li class="button_nav head_bt"><a href="#delivery">Доставка и оплата</a></li>
-            <li class="button_nav head_bt"><a href="#contacts">Контакты</a></li>
-        </ul>
-        <button id="registerBtn" class="register-btn">Регистрация</button>
-    </nav>
+    <h1>Ильин Артём Русланович - Лабораторная работа №4</h1>
 
-    <dialog id="registerDialog" class="register-dialog">
-        <form id="registerForm" class="register-form" novalidate>
-            <button type="button" id="closeDialog" class="close-dialog" aria-label="Закрыть окно">×</button>
-            
-            <h2>Регистрация</h2>
-            
-            <div class="form-group">
-                <label for="name">Имя (обязательно)</label>
-                <input type="text" id="name" name="name" required aria-describedby="name-error">
-                <div id="name-error" class="error-message" hidden aria-live="polite"></div>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email (обязательно)</label>
-                <input type="email" id="email" name="email" required aria-describedby="email-error">
-                <div id="email-error" class="error-message" hidden aria-live="polite"></div>
-            </div>
-            
-            <div class="form-group">
-                <label for="password">Пароль (минимум 6 символов)</label>
-                <div class="password-input">
-                    <input type="password" id="password" name="password" required minlength="6" aria-describedby="password-error">
-                    <button type="button" id="togglePassword" class="toggle-password" aria-label="Показать пароль">👁️</button>
-                </div>
-                <div id="password-error" class="error-message" hidden aria-live="polite"></div>
-            </div>
-            
-            <button type="submit" class="submit-btn">Зарегистрироваться</button>
-        </form>
-    </dialog>
-</header>
-<!-- Мяу-->
-<footer>
-    <div class="container footer">
-        <div class="foot_navigation">
-            <p class="some_big">© 2018-2024 AQUARIM</p>
-            <nav>
-                <h3 class="foot_head">О РЕСТОРАНЕ</h3>
-                <ul class="foot_nav">
-                    <li class="button_nav foot_bt"><a href="#">О шефе</a></li>
-                    <li class="button_nav foot_bt"><a href="#">Галерея</a></li>
-                    <li class="button_nav foot_bt"><a href="#">Новости</a></li>
-                    <li class="button_nav foot_bt"><a href="#">Команда</a></li>
-                    <li class="button_nav foot_bt"><a href="grid.html">Grid</a></li>
-                    <li class="button_nav foot_bt"><a href="form.html">Form</a></li>
-                    <li class="button_nav foot_bt"><a href="demo.html">Demo</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <h3 class="foot_head">ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
-                <ul class="foot_nav">
-                    <li class="button_nav foot_bt"><a href="#menu">Меню</a></li>
-                    <li class="button_nav foot_bt"><a href="#delivery">Доставка и оплата</a></li>
-                    <li class="button_nav foot_bt"><a href="#reviews">Отзывы</a></li>
-                    <li class="button_nav foot_bt"><a href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-        <p class="footer_icon">AQUARIM</p>
-        <div class="site_info">
-            <a class="politics" href="#">Политика обработки персональных данных</a>
-            <a class="desing_by" href="#">Desing by @sshultse</a>
-        </div>
+  <section>
+    <h2>Promise Task</h2>
+    <button class="task-run">Запустить</button>
+    <div class="task-result"></div>
+  </section>
+
+  <section>
+    <h2>Генератор случайных данных</h2>
+    <input type="number" class="random-input" placeholder="Введите число">
+    <button class="random-generate">Генерировать</button>
+    <div class="random-result"></div>
+  </section>
+
+  <section>
+    <h2>Крафтинг</h2>
+
+    <div class="item" data-item="log">
+      <h3>Бревно (<span class="item-count">0</span>)</h3>
+      <button class="craft-button">Создать</button>
+      <div class="item-status"></div>
+      <div class="progress-bar item-progress"></div>
     </div>
-</footer>
 
-<script src="Lab3.js"></script>
+    <div class="item" data-item="ore">
+      <h3>Руда (<span class="item-count">0</span>)</h3>
+      <button class="craft-button">Создать</button>
+      <div class="item-status"></div>
+      <div class="progress-bar item-progress"></div>
+    </div>
 
+    <div class="item" data-item="rod">
+      <h3>Палка (<span class="item-count">0</span>)</h3>
+      <button class="craft-button">Создать</button>
+      <div class="item-status"></div>
+      <div class="progress-bar item-progress"></div>
+    </div>
+
+    <div class="item" data-item="bar">
+      <h3>Слиток (<span class="item-count">0</span>)</h3>
+      <button class="craft-button">Создать</button>
+      <div class="item-status"></div>
+      <div class="progress-bar item-progress"></div>
+    </div>
+
+    <div class="item" data-item="tool">
+      <h3>Инструмент (<span class="item-count">0</span>)</h3>
+      <button class="craft-button">Создать</button>
+      <div class="item-status"></div>
+      <div class="progress-bar item-progress"></div>
+    </div>
+
+  </section>
+
+    <script src="Lab4.js"></script>
 </body>
 </html>
