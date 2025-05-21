@@ -4,7 +4,7 @@
   --text: #111827;
   --card: #f3f4f6;
   --accent: #2563eb;
-  --success: #1d8d46;
+  --success: #186b37;
   --error: #a72a2a;
   --btn: #e5e7eb;
   --btn-hover: #d1d5db;
@@ -16,9 +16,9 @@
   --bg: #1f2937;
   --text: #f9fafb;
   --card: #374151;
-  --accent: #3b82f6;
-  --success: #1d8d46;
-  --error: #a72a2a;
+  --accent: #0062ff;
+  --success: #004118;
+  --error: #b80000;
   --btn: #4b5563;
   --btn-hover: #6b7280;
   --toggle-bg: #4b5563;
@@ -161,6 +161,7 @@ h1, h2 {
 .gallery-reload-btn {
   padding: 0.7rem 1.4rem;
   background-color: var(--btn);
+  color: var(--text);
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -178,7 +179,7 @@ h1, h2 {
 }
 
 #gallery-empty {
-  color: red;
+  color: rgb(196, 0, 0);
   font-weight: 900;
 }
 
