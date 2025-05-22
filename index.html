@@ -1,64 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Лаба№5</title>
-
-  <!-- Защита от мерцания темы + переключения стикера -->
-  <script>
-    (function initTheme() {
-      var theme = localStorage.getItem('theme');
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      }
-    })();
-  </script>
-
-  <link rel="stylesheet" href="style.css"/>
-  <script src="Lab5.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаба№6</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="Lab6.js" defer></script>
 </head>
 <body>
+  <main class="main">
+    <h1 class="main-title">Ильин Артём Русланович - Лабораторная работа №6</h1>
 
-  <header class="header">
-    <button id="themeToggle" class="theme-toggle-btn">🌙</button>
-  </header>
+    <!-- version-manager -->
+    <section class="task task--version-manager">
+      <h2 class="task-title">Версионирование</h2>
 
-  <h1 class="main-title">Ильин Артём Русланович - Лабораторная работа №5</h1>
+      <form class="form form--version" novalidate>
+        <label for="version-input" class="form-label">Введите версию:</label>
+        <input type="text" id="version-input" class="form-input" placeholder="например, 1.2.3">
+        <button type="submit" class="btn btn--create-version">Создать версию</button>
+        <p class="form-error" aria-live="polite"></p>
+      </form>
 
-  <!-- Тост -->
-  <section class="toast">
-    <h2 class="toast-title">Демонстрация уведомлений (Toast)</h2>
-    <button class="toast-success-btn" id="show-success">Показать успех</button>
-    <button class="toast-error-btn" id="show-error">Показать ошибку</button>
-    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
-  </section>
-
-  <!-- Галерея -->
-<section class="gallery">
-  <h2 class="gallery-title">Галерея</h2>
-  <button id="reload-gallery" class="gallery-reload-btn">Обновить галерею</button>
-  <div id="gallery-loader" class="gallery-loader">Загрузка...</div>
-  <div id="gallery-empty" style="display: none;">Изображения не найдены</div>
-  <div id="gallery-container" class="gallery-container"></div>
-</section>
-
-
-  <!-- Температура -->
-  <section class="temperature">
-    <h2 class="temperature-title">Температура</h2>
-    <form id="temperature-form" class="temperature-form">
-      <div class="temperature-group">
-        <label for="room-input" class="temperature-label">Номер аудитории:</label>
-        <input type="text" id="room-input" name="room" class="temperature-input" required aria-required="true"/>
+      <div class="version-display">
+        <h3 class="section-subtitle">Текущая версия:</h3>
+        <p class="version-value">-</p>
       </div>
-      <div class="temperature-group">
-        <label for="temperature-input" class="temperature-label">Температура (°C):</label>
-        <input type="number" id="temperature-input" name="temperature" class="temperature-input" required aria-required="true"/>
-      </div>
-      <button type="submit" id="temperature-submit" class="temperature-submit-btn">Отправить</button>
-    </form>
-  </section>
 
+      <div class="btn-group btn-group--version">
+        <button type="button" class="btn btn--major">Major</button>
+        <button type="button" class="btn btn--minor">Minor</button>
+        <button type="button" class="btn btn--patch">Patch</button>
+        <button type="button" class="btn btn--rollback">Rollback</button>
+      </div>
+    </section>
+
+    <!-- shape-calculator -->
+    <section class="task task--shape-calculator">
+      <h2 class="task-title">Прямоугольник и квадрат</h2>
+
+      <form class="form form--shapes" novalidate>
+        <label for="width-input" class="form-label">Ширина:</label>
+        <input type="number" id="width-input" class="form-input" placeholder="Введите ширину">
+
+        <label for="height-input" class="form-label">Высота:</label>
+        <input type="number" id="height-input" class="form-input" placeholder="Введите высоту">
+
+        <div class="btn-group btn-group--shapes">
+          <button type="button" class="btn btn--calc-area">Рассчитать площадь</button>
+          <button type="button" class="btn btn--calc-perimeter">Рассчитать периметр</button>
+        </div>
+      </form>
+
+      <div class="result-display result-display--shapes">
+        <h3 class="section-subtitle">Результат:</h3>
+        <p class="shape-result"> - </p>
+      </div>
+    </section>
+
+    <!-- temperature-calculator -->
+    <section class="task task--temperature-calculator">
+      <h2 class="task-title">Температура</h2>
+
+      <form class="form form--temperature" novalidate>
+        <label for="temp1-input" class="form-label">Температура 1 (°C):</label>
+        <input type="number" id="temp1-input" class="form-input" placeholder="Введите температуру 1">
+
+        <label for="temp2-input" class="form-label">Температура 2 (°C):</label>
+        <input type="number" id="temp2-input" class="form-input" placeholder="Введите температуру 2">
+
+        <fieldset class="form-fieldset">
+          <legend>Единицы измерения:</legend>
+          <label><input type="radio" name="unit" value="C" checked> Цельсий (°C)</label>
+          <label><input type="radio" name="unit" value="K"> Кельвин (K)</label>
+          <label><input type="radio" name="unit" value="F"> Фаренгейт (°F)</label>
+        </fieldset>
+
+        <div class="temperature-display">
+          <p class="temperature-value temperature-value--1">Температура 1: -</p>
+          <p class="temperature-value temperature-value--2">Температура 2: -</p>
+        </div>
+
+        <div class="btn-group btn-group--temperature">
+          <button type="button" class="btn btn--add">Сложить</button>
+          <button type="button" class="btn btn--subtract">Вычесть</button>
+        </div>
+
+        <div class="result-display result-display--temperature">
+          <p class="temperature-result">Результат: -</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- rock-paper-scissors -->
+    <section class="task task--rps">
+      <h2 class="task-title">Вечная битва: Камень-Ножницы-Бумага</h2>
+
+      <div class="btn-group btn-group--rps">
+        <button type="button" class="btn btn--start">Следить за играми</button>
+        <button type="button" class="btn btn--stop" disabled>Остановить</button>
+      </div>
+
+      <div class="round-history">
+        <h3 class="section-subtitle">История раундов:</h3>
+        <ul class="round-list"></ul>
+      </div>
+
+      <div class="rps-stats">
+        <h3 class="section-subtitle">Статистика:</h3>
+        <p class="stats-player1-wins">Победы Игрока 1: 0</p>
+        <p class="stats-player2-wins">Победы Игрока 2: 0</p>
+        <p class="stats-player1-choices">Выборы Игрока 1: -</p>
+        <p class="stats-player2-choices">Выборы Игрока 2: -</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
